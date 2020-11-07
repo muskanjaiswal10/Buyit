@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Header";
 import Home from "./Home";
+import Checkout from './Checkout';
 function App() {
   return (
     <Router>
@@ -10,16 +11,15 @@ function App() {
         <Switch>
           <Route path="/checkout">
             <Header />
-            <h1>Checkout</h1>
+            <Checkout />
           </Route>   
           <Route path= "/login">
-          <h1>Login Page</h1>
+            <h1>Login Page</h1>
           </Route> 
           {/*This is default route*/}
           <Route path="/">
             <Header />
             <Home />
-          <h1>Home PAGE!!</h1>
           </Route>
         </Switch>
       </div>
