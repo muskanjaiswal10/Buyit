@@ -1,10 +1,12 @@
 import React from 'react';
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
+import {Col,Row} from 'react-bootstrap';
 
 function Product({id, title, image, price, rating}) {
 const [{basket},dispatch] = useStateValue();
 const addToBasket = () => {
+    alert("Item added to basket");
     //ADD item to basket
     dispatch({
         type: "ADD_TO_BASKET",
@@ -16,11 +18,12 @@ const addToBasket = () => {
             rating: rating
         },
     });
+   
 
 };
 
     return (
-        <div className="product">
+        <div className="product" >
             <div className="product_info">
             <p>{title}</p>
             <p className="product_price">

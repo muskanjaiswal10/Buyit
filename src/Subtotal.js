@@ -7,6 +7,9 @@ import { getBasketTotal } from "./reducer";
 
 function Subtotal() {
     const [{basket}, dispatch] = useStateValue();
+    const myfunc= () => {
+        alert("Sucessfully Checked out");
+    }
     return (
         <div className= "subtotal">
             {/*Price*/}
@@ -30,7 +33,7 @@ function Subtotal() {
             prefix={"$"}
             />
 
-            <button>Proceed to Checkout</button>
+            <button onClick={myfunc}>Proceed to Checkout</button>
         </div>
     );
 }
